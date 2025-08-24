@@ -1,0 +1,107 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Make canvas (Three.js background) full screen */
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero Section */
+header#hero {
+  height: 100vh; /* full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header#hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.7);
+}
+
+header#hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-align: center;
+}
+
+/* About */
+#about p {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+  color: #cccccc;
+}
+
+/* Projects */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: rgba(0, 255, 204, 0.1);
+}
+
+/* Contact */
+#contact p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header#hero h1 {
+    font-size: 2.2rem;
+  }
+  section {
+    padding: 50px 15px;
+  }
+}
